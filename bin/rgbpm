@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # rgbpm - Copyright (c) 2019 Matthias C. Hormann
 # apply replay gain (mp3gain2) and BPM (bpm-calc) to all folders below and including specified one
