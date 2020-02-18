@@ -372,7 +372,7 @@ $ make
 $ [sudo] make install
 ```
 
-If you modified [docs/loudgain.1.md](docs/loudgain.1.md) (the man page source), get `ronn`, move to the `docs/` folder and type:
+If you modified [docs/loudgain.1.md](docs/loudgain.1.md) (the man page source), get [`ronn`](http://rtomayko.github.io/ronn/), move to the `docs/` folder and type:
 
 ```bash
 $ ronn loudgain.1.md
