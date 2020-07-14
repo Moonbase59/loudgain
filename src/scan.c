@@ -227,7 +227,7 @@ int scan_file(const char *file, unsigned index) {
 
       rc = avcodec_send_packet(ctx, &packet);
       if (rc < 0) {
-        err_printf("Error while sending a packet to the decoder");
+        err_printf("Note: Error while sending a packet to the decoder");
         break;
       }
 
