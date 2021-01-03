@@ -37,6 +37,7 @@ command -v loudgain >/dev/null 2>&1 || LOUDGAIN=false
 
 # if loudgain not installed, we need mp3gain2, metaflac and vorbisgain, go check
 if [ "$LOUDGAIN" != true ] ; then
+  echo "'loudgain' is not installed, using mp3gain2, metaflac and vorbisgain"
   # check if mp3gain2 installed
   command -v mp3gain2 >/dev/null 2>&1 || { echo >&2 "$me requires \"mp3gain2\" but it's not installed. Aborting."; exit 2; }
 
