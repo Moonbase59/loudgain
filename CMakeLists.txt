@@ -51,9 +51,11 @@ INCLUDE_DIRECTORIES(
   ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-# Mac OS X has no pty.h
+# Try to detect libutil
 INCLUDE (CheckIncludeFiles)
 CHECK_INCLUDE_FILES (pty.h HAVE_PTY_H)
+CHECK_INCLUDE_FILES (util.h HAVE_UTIL_H)
+CHECK_INCLUDE_FILES (libutil.h HAVE_LIBUTIL_H)
 
 CONFIGURE_FILE("config.h.in" "config.h")
 

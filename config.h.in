@@ -8,5 +8,7 @@
 #define PROJECT_VER_PATCH "@VERSION_PATCH@"
 
 #cmakedefine HAVE_PTY_H
+#cmakedefine HAVE_UTIL_H
+#cmakedefine HAVE_LIBUTIL_H
 
 #endif // INCLUDE_GUARD
