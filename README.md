@@ -23,6 +23,7 @@ _**Windows 10 users:** Read [Installation on Windows 10 (Linux bash)](#installat
 - [MAIN FEATURES](#main-features)   
 - [NEWS, CHANGELOG](#news-changelog)   
 - [GETTING STARTED](#getting-started)   
+- [Installation using OS packages](#installation-using-os-packages)
 - [Installation using Homebrew (Mac & Linux)](#installation-using-homebrew-mac-linux)   
 - [Installation on Windows 10 (Linux bash)](#installation-on-windows-10-linux-bash)   
 - [DEPENDENCIES](#dependencies)   
@@ -269,6 +270,19 @@ $ loudgain -L -a -k -s e *.wma         # scan & tag a WMA album
 
 See the [man page](docs/loudgain.1.md) for more information.  
 See [loudgain makes it easy following the »Gold Standard«](#loudgain-makes-it-easy-following-the-gold-standard) for quickstart recommended settings.
+
+---
+
+## Installation using OS packages
+
+### Fedora
+
+`lougain` depends on FFmpeg, which is not included in Fedora for legal reasons.  However, `loudgain` can instead be installed from the third-party RPM Fusion repository:
+
+```bash
+rpm -q rpmfusion-free-release || sudo yum install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-`rpm -E %fedora`.noarch.rpm
+sudo yum install loudgain
+```
 
 ---
 
