@@ -277,7 +277,7 @@ See [loudgain makes it easy following the »Gold Standard«](#loudgain-makes-it-
 
 ### Fedora
 
-`lougain` depends on FFmpeg, which is not included in Fedora for legal reasons.  However, `loudgain` can instead be installed from the third-party RPM Fusion repository:
+`lougain` depends on FFmpeg, which is not included in [Fedora](https://getfedora.org/) for legal reasons.  However, `loudgain` can instead be installed from the third-party [RPM Fusion](https://rpmfusion.org/) repository:
 
 ```bash
 rpm -q rpmfusion-free-release || sudo yum install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-`rpm -E %fedora`.noarch.rpm
