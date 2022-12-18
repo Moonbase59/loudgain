@@ -439,6 +439,9 @@ static void scan_frame(ebur128_state *ebur128, AVFrame *frame,
 	out_size = av_samples_get_buffer_size(
 		&out_linesize, frame -> channels, frame -> nb_samples, out_fmt, 0
 	);
+    if (out_size < 0){
+        fail_printf("av_samples_get_buffer_size() failed with return code %d", out_size);
+    }
 
 	out_data = av_malloc(out_size);
     if (out_data == NULL){
