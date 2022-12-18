@@ -199,6 +199,9 @@ int scan_file(const char *file, unsigned index) {
 	packet.size = buffer_size;
 
 	swr = swr_alloc();
+    if (swr == NULL){
+        fail_printf("unable to allocate memory fro SwrContext");
+    }
 
 	*ebur128 = ebur128_init(
 		ctx -> channels, ctx -> sample_rate,
@@ -438,6 +441,9 @@ static void scan_frame(ebur128_state *ebur128, AVFrame *frame,
 	);
 
 	out_data = av_malloc(out_size);
+    if (out_data == NULL){
+        fail_printf("av_malloc failed to allocate memory");
+    }
 
 	if (swr_convert(
 		swr, (uint8_t**) &out_data, frame -> nb_samples,
