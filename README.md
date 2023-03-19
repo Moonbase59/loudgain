@@ -275,19 +275,10 @@ See [loudgain makes it easy following the »Gold Standard«](#loudgain-makes-it-
 
 ## Installation using OS packages
 
-### Fedora
-
-From [Fedora](https://getfedora.org/) 36 onwards:
+### [Fedora](https://packages.fedoraproject.org/pkgs/loudgain/loudgain/)
 
 ```bash
 sudo yum install loudgain
-```
-
-The version of FFmpeg included with Fedora does not support some codecs for legal reasons, so you may prefer the FFmpeg package from the third-party [RPM Fusion](https://rpmfusion.org/) repository:
-
-```bash
-rpm -q rpmfusion-free-release || sudo yum install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-`rpm -E %fedora`.noarch.rpm
-yum swap --allowerasing ffmpeg-free ffmpeg
 ```
 
 ---
