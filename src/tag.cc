@@ -84,6 +84,12 @@
 #include "tag.h"
 #include "printf.h"
 
+void tag_get_version(int* major, int* minor, int* patch) {
+  *major = TAGLIB_MAJOR_VERSION;
+  *minor = TAGLIB_MINOR_VERSION;
+  *patch = TAGLIB_PATCH_VERSION;
+}
+
 // define possible replaygain tags
 
 enum RG_ENUM {

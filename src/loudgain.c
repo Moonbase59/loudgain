@@ -148,6 +148,10 @@ int  ebur128_v_major     = 0;
 int  ebur128_v_minor     = 0;
 int  ebur128_v_patch     = 0;
 char ebur128_version[15] = "";
+int  tag_v_major     = 0;
+int  tag_v_minor     = 0;
+int  tag_v_patch     = 0;
+char tag_version[15] = "";
 unsigned swr_ver         = 0;
 char     swr_version[15] = "";
 unsigned lavf_ver         = 0;
@@ -175,6 +179,11 @@ int main(int argc, char *argv[]) {
 	bool lowercase      = false; // force MP3 ID3v2 tags to lowercase?
 	bool strip          = false; // MP3 ID3v2: strip other tag types?
 	int  id3v2version   = 4;     // MP3 ID3v2 version to write; can be 3 or 4
+
+	// taglib version 
+	tag_get_version(&tag_v_major, &tag_v_minor, &tag_v_patch);
+	snprintf(tag_version, sizeof(tag_version), "%d.%d.%d",
+		tag_v_major, tag_v_minor, tag_v_patch);
 
 	// libebur128 version check -- versions before 1.2.4 aren’t recommended
 	ebur128_get_version(&ebur128_v_major, &ebur128_v_minor, &ebur128_v_patch);
@@ -725,6 +734,7 @@ static inline void help(void) {
 
 static inline void version(void) {
 	printf("%s %s - using:\n", PROJECT_NAME, PROJECT_VER);
+	printf("  %s %s\n", "libtag", tag_version);
 	printf("  %s %s\n", "libebur128", ebur128_version);
 	printf("  %s %s\n", "libavformat", lavf_version);
 	printf("  %s %s\n", "libswresample", swr_version);

@@ -32,6 +32,8 @@
 extern "C" {
 #endif
 
+void tag_get_version(int* major, int* minor, int* patch);
+
 bool tag_write_mp3(scan_result *scan, bool do_album, char mode, char *unit,
   bool lowercase, bool strip, int id3v2version);
 bool tag_clear_mp3(scan_result *scan, bool strip, int id3v2version);
