@@ -25,6 +25,7 @@ _**Windows 10 users:** Read [Installation on Windows 10 (Linux bash)](#installat
 - [MAIN FEATURES](#main-features)   
 - [NEWS, CHANGELOG](#news-changelog)   
 - [GETTING STARTED](#getting-started)   
+- [Installation using OS packages](#installation-using-os-packages)
 - [Installation using Homebrew (Mac & Linux)](#installation-using-homebrew-mac-linux)   
 - [Installation on Windows 10 (Linux bash)](#installation-on-windows-10-linux-bash)   
 - [DEPENDENCIES](#dependencies)   
@@ -271,6 +272,16 @@ $ loudgain -L -a -k -s e *.wma         # scan & tag a WMA album
 
 See the [man page](docs/loudgain.1.md) for more information.  
 See [loudgain makes it easy following the »Gold Standard«](#loudgain-makes-it-easy-following-the-gold-standard) for quickstart recommended settings.
+
+---
+
+## Installation using OS packages
+
+### [Fedora](https://packages.fedoraproject.org/pkgs/loudgain/loudgain/)
+
+```bash
+sudo yum install loudgain
+```
 
 ---
 
