@@ -139,7 +139,7 @@ def main():
                     cluster.setdefault(root, {}).setdefault(fileExt.lower(),
                         []).append(file)
 
-    # statitics
+    # statistics
     stat_folders = len(cluster)
     stat_extensions = { ext for folder in cluster for ext in cluster[folder] }
     stat_files = 0
