@@ -115,7 +115,7 @@ int scan_file(const char *file, unsigned index) {
 
 	AVFormatContext *container = NULL;
 
-	AVCodec *codec;
+	const AVCodec *codec;
 	AVCodecContext *ctx;
 
 	AVFrame *frame;
