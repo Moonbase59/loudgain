@@ -3,7 +3,7 @@
 # Modifications Copyright (C) 2019 Matthias C. Hormann <mhormann@gmx.de>
 # This file is released under the 2 clause BSD license, see COPYING
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.31...4.0)
 PROJECT(loudgain C CXX)
 
 SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/" ${CMAKE_MODULE_PATH})
